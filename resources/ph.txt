@@ -1,4 +1,5 @@
 adclick.g.doublecklick.net
+adclick.g.doubleclick.net
 adeventtracker.spotify.com
 ads-fa.spotify.com
 analytics.spotify.com
