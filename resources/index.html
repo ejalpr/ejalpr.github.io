@@ -1,1 +1,11 @@
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjx6unKkS9PTCGxd5UXQlVd8xJlaTQmktdJHLvTyfo2lopDA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe id="idIframe" onload="iframeLoaded()" src="https://docs.google.com/forms/d/e/1FAIpQLSfjx6unKkS9PTCGxd5UXQlVd8xJlaTQmktdJHLvTyfo2lopDA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<script type="text/javascript">
+  function iframeLoaded() {
+      var iFrameID = document.getElementById('idIframe');
+      if(iFrameID) {
+            // here you can make the height, I delete it first, then I make it again
+            iFrameID.height = "";
+            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+      }   
+  }
+</script>   
