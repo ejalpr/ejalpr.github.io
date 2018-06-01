@@ -5,9 +5,9 @@ You can choose any distro, but I'm assuming Ubuntu for these instructions
 After you install it, launch Ubuntu from your start menu
 
 ## Install Dependencies (see https://jekyllrb.com/docs/installation/ for details or troubleshooting)
-### Run these in the WSL Ubuntu terminal window
+Run these in the WSL Ubuntu terminal window
 ```
-sudo apt-get install ruby ruby-dev build-essential
+sudo apt-get install ruby ruby-dev build-essential libgmp-dev patch zlib1g-dev liblzma-dev
 ```
 
 (Don't use sudo for these:)
@@ -20,14 +20,17 @@ source ~/.bashrc
 gem install jekyll bundler
 ```
 
-### Setup git
-# git should be preinstalled on WSL, but "sudo apt-get install git" if you need to
+## Setup git
+git should be preinstalled on WSL, but "sudo apt-get install git" if you need to
+```
 cd ~
 mkdir git
 cd git
 git clone https://github.com/ejalpr/melscritters.git
 cd melscritters
-# now, if you run "ls" in melscritters, you should see all the website files
+```
+Now, if you run "ls" in melscritters, you should see all the website files.
 
-# ejalpr.github.io
-For testing purposes
+```
+bundle install
+```
