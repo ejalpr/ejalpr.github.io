@@ -200,6 +200,7 @@ You'll want to change this in two places.
       <img src="/pictures/octopus_classof2018.jpg" style="width:100%" onclick="url()">
   </div>
 ```
+
 Change the image location, like before.
 
 2. Under \<!-- THUMBNAIL -->
