@@ -4,12 +4,12 @@ title: Instructions
 # Setup
 ## Install Windows Subsystem for Linux (WSL)
 * Instructions: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>. Essentially, activate it in Optional Features, then install a distro from the Windows Store.
-* You can choose any distro, but I'm assuming Ubuntu 18.04 for these instructions (https://www.microsoft.com/en-us/p/ubuntu-1804/9n9tngvndl3q).
+* You can choose any distro, but I'm assuming Ubuntu 18.04 for these instructions <https://www.microsoft.com/en-us/p/ubuntu-1804/9n9tngvndl3q>.
 * After you install it, launch Ubuntu from your start menu.
 * From here on, run everything in the Ubuntu terminal window.
 
 ## Install Dependencies
-See https://jekyllrb.com/docs/installation/ for details or troubleshooting.
+See <https://jekyllrb.com/docs/installation/> for details or troubleshooting.
 
 Dependencies (note, I needed more dependencies than the Jekyll website says, since our theme uses a gem called nokogiri):
 
@@ -61,7 +61,7 @@ Now start your server:
 bundle exec jekyll serve
 ```
 
-And navigate to http://localhost:4000/ in your web browser. Voila! Hit ctrl-c when you're ready to shut the server down.
+And navigate to <http://localhost:4000/> in your web browser. Voila! Hit ctrl-c when you're ready to shut the server down.
 
 ### Starting from scratch
 This copy of the website is entirely local to your computer. You can test out any changes you want. If you make a mistake and can't figure out how to fix it, just nuke the folder and restart from scratch. You won't need to rerun "bundle install", and none of your changes will be saved to Github.
@@ -105,7 +105,7 @@ icon: fa-image ## Uses this icon in the sidebar. Go to "https://fontawesome.com/
 ---
 ```
 
-Below the dashes goes your content. You can type in Markdown for simple formatting, images, etc (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), or add in html, css, and javascript (see /pages/gallery.md as an example).
+Below the dashes goes your content. You can type in Markdown for simple formatting, images, etc (<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>), or add in html, css, and javascript (see /pages/gallery.md as an example).
 
 ctrl-x to exit nano, it'll ask you at the bottom if you want to save. n/y, then enter.
 
@@ -129,7 +129,7 @@ This is a new page.
 
 ```
 
-ctrl-x and save. Go to localhost:4000/example to see your new page.
+ctrl-x and save. Go to <http://localhost:4000/example> to see your new page.
 
 ## Uploading new pictures
 Pictures go in the melscritters/pictures folder. Your Windows installation is located at "/mnt/c/" (replace c with your drive letter), so you can copy any files over from Windows.
@@ -297,8 +297,8 @@ But I've never tried it before. I think it's better just to make changes on one 
 # Further Reading
 If you want to know more about the inner workings of the website:
 
-Github Pages: https://help.github.com/articles/what-is-github-pages/
+Github Pages: <https://help.github.com/articles/what-is-github-pages/>
 
-Jekyll: https://jekyllrb.com/docs/home/
+Jekyll: <https://jekyllrb.com/docs/home/>
 
-The Prologue theme which I forked, which has more information about how to customize your website: https://github.com/chrisbobbe/jekyll-theme-prologue
+The Prologue theme which I forked, which has more information about how to customize your website: <https://github.com/chrisbobbe/jekyll-theme-prologue>
