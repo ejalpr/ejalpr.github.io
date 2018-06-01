@@ -81,6 +81,7 @@ Note that the Windows folders in the path are case-sensitive.
 
 You can bulk copy files or folders like this, using the normal Linux commands you know.
 
+### Templates
 You shouldn't need to change any of the template folders, but here's an overview just in case you'd like to experiment:
 * /\_includes contains snippets of code that are reused on multiple pages. So, for example, I wrote \_includes/custom_social.html to add in an Etsy icon.
 * /\_layouts has the base formatting for each of the various page types.
@@ -91,3 +92,23 @@ You shouldn't need to change any of the template folders, but here's an overview
 * /pages contains all the other pages on the website, right now Gallery, Credits, and Index (which is a blank container to hold the front page). You can have these extra pages appear in the sidebar (like Gallery) or not (like Credits).
 * /pictures is where I store all the pictures
 * Most of the other files are administrative, but \_config.yml contains some global variables: You could change the website's title, subtitle, social urls, avatar, etc.
+
+### Adding or editing pages (like Gallery)
+Example: Gallery
+```
+nano /pages/gallery.md
+```
+Every file starts with front matter to change basic variables. Some of these are mandatory, others are optional
+```
+---
+layout: page ## uses this template from /\_layouts
+title: Gallery ##self-explanatory. *MANDATORY
+order: 2 ## If this page appears on the sidebar, what order do you want it in?
+permalink: /credits ## will place the page at melscritters.com/credits *MANDATORY
+hide: true ## "true" if you want to hide the page from the sidebar. Don't type this line if you want it to appear.
+cover-photo: /pictures/banner.jpg ## uses the listed picture as a cover photo. I actually don't think this does anything outside the main page but I was too lazy to delete it.
+cover-photo-alt: ## Description of cover-photo, if you choose to include it.
+icon: fa-image ## Uses this icon in the sidebar. Go to "https://fontawesome.com/icons?d=gallery&q=image&m=free" for a collection of icons you can choose from. Not all of them work, but most of them do. When you choose one, identify it as fa-[icon-name].
+---
+```
+ctrl-x to exit nano, it'll ask you at the bottom if you want to save. n/y, then enter.
