@@ -149,7 +149,9 @@ Each section on the homepage is a separate file in \/sections.
 
 The cover photo is identified in Intro, so you'll change it there.
 
+```
 nano /\_sections/intro.md
+```
 
 ```
 ---
