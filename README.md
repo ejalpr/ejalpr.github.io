@@ -110,9 +110,9 @@ cover-photo: /pictures/banner.jpg ## uses the listed picture as a cover photo. I
 cover-photo-alt: ## Description of cover-photo, if you choose to include it.
 icon: fa-image ## Uses this icon in the sidebar. Go to "https://fontawesome.com/icons?d=gallery&q=image&m=free" for a collection of icons you can choose from. Not all of them work, but most of the simple ones do. When you choose one, identify it as fa-[icon-name].
 ---
-
-Below the dashes goes your content. You can type in Markdown for simple formatting, images, etc (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), or add in html, css, and javascript (see /pages/gallery.md as an example).
 ```
+Below the dashes goes your content. You can type in Markdown for simple formatting, images, etc (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), or add in html, css, and javascript (see /pages/gallery.md as an example).
+
 ctrl-x to exit nano, it'll ask you at the bottom if you want to save. n/y, then enter.
 
 Try to add a new page:
@@ -147,6 +147,20 @@ icon: fa-comment
 auto-header: none ## Without this line, the title will be added automatically. If you want to hide the title (for example, to show a banner photo instead), add this line.
 ---
 Content content content
-
-In intro.md and intro2.md, the <style> and <div> are what put those buttons there and show/hide them depending on the screen size. If you want to change where the buttons go, you'll find the <button> </button> tags at the bottom.
 ```
+In intro.md and intro2.md, the <style> and <div> are what put those buttons there and show/hide them depending on the screen size. If you want to change where the buttons go, you'll find the <button> </button> tags at the bottom.
+
+You can add or delete sections on the homepage by adding or deleting them in the /\_sections/ folder.
+
+Try opening your About.md section. You'll see all the content and can edit it however you'd like.
+
+# Changing your Gallery
+```
+nano pages/gallery.md
+```
+A few lines down, in \<div class="row">, you'll see a bunch of divs. To add or change these pictures, you'll want to edit the lines that say:
+  
+```
+<img src="/pictures/rat_couple.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow">
+```
+  
