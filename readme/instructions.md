@@ -94,7 +94,7 @@ Every file starts with front matter to change basic variables. Some of these are
 
 ```
 ---
-layout: page ## uses this template from /\_layouts. Usually, you'll want to use 'page'.
+layout: page ## uses this template from /_layouts. Usually, you'll want to use 'page'.
 title: Gallery ##self-explanatory. *MANDATORY
 order: 2 ## If this page appears on the sidebar, what order do you want it in?
 permalink: /credits ## will place the page at melscritters.com/credits *MANDATORY
@@ -145,12 +145,12 @@ Note that the Windows folders in the path are case-sensitive.
 You can bulk copy files or folders like this, using the normal Linux commands you know.
 
 ## Changing the Home Page (including the header photo)
-Each section on the homepage is a separate file in \/sections.
+Each section on the homepage is a separate file in /\_sections.
 
 The cover photo is identified in Intro, so you'll change it there.
 
 ```
-nano /\_sections/intro.md
+nano /_sections/intro.md
 ```
 
 ```
