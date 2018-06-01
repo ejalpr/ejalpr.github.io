@@ -1,4 +1,4 @@
-# Instructions
+# Setup
 ## Install Windows Subsystem for Linux (WSL)
 * Instructions: https://docs.microsoft.com/en-us/windows/wsl/install-win10. Essentially, activate it in Optional Features, then install a distro from the Windows Store.
 * You can choose any distro, but I'm assuming Ubuntu 18.04 for these instructions (https://www.microsoft.com/en-us/p/ubuntu-1804/9n9tngvndl3q).
@@ -65,34 +65,11 @@ bundle exec jekyll serve
 ```
 And re-navigate to localhost:4000.
 
-## Editing the website
+# Editing the website: Basics
 Keep "bundle exec jekyll serve" running in a terminal window in the background. Open up a new window.
 ```
 cd git/melscritters
 ```
-### Uploading new pictures
-Pictures go in the melscritters/pictures folder. Your Windows installation is located at "/mnt/c/" (replace c with your drive letter), so you can copy any files over from Windows.
-
-For example, if you have rat.jpg in your Downloads folder and you want to add it to your website:
-```
-cp /mnt/c/Users/Wesleigh/Downloads/rat.jpg ~/git/melscritters/pictures/black.jpg
-```
-Note that the Windows folders in the path are case-sensitive.
-
-You can bulk copy files or folders like this, using the normal Linux commands you know.
-
-### Templates
-You shouldn't need to change any of the template folders, but here's an overview just in case you'd like to experiment:
-* /\_includes contains snippets of code that are reused on multiple pages. So, for example, I wrote \_includes/custom_social.html to add in an Etsy icon.
-* /\_layouts has the base formatting for each of the various page types.
-* /\_posts is where you would store posts if you wanted to write a blog.
-* /\_sass contains css code.
-* /\_sections contains the main sections you see on the front page (Intro, Featured, About, Connect).
-* /assets contains extra js, css, fonts, and some default images. So, for example, the javascript and css controlling the slideshows are located in /assets/js/modal.js and slidegallery.js, and /assets/css/modal.css and slidegallery.css
-* /pages contains all the other pages on the website, right now Gallery, Credits, and Index (which is a blank container to hold the front page). You can have these extra pages appear in the sidebar (like Gallery) or not (like Credits).
-* /pictures is where I store all the pictures
-* Most of the other files are administrative, but \_config.yml contains some global variables: You could change the website's title, subtitle, social urls, avatar, etc.
-
 ### Adding or editing pages (like Gallery)
 Example: Credits
 ```
@@ -133,15 +110,28 @@ This is a new page.
 ```
 ctrl-x and save. Go to localhost:4000/example to see your new page.
 
-### Changing the Home Page
+## Uploading new pictures
+Pictures go in the melscritters/pictures folder. Your Windows installation is located at "/mnt/c/" (replace c with your drive letter), so you can copy any files over from Windows.
+
+For example, if you have rat.jpg in your Downloads folder and you want to add it to your website:
+```
+cp /mnt/c/Users/Wesleigh/Downloads/rat.jpg ~/git/melscritters/pictures/rat.jpg
+```
+Note that the Windows folders in the path are case-sensitive.
+
+You can bulk copy files or folders like this, using the normal Linux commands you know.
+
+## Changing the Home Page (including the header photo)
 Each section on the homepage is a separate file in \/sections.
+
+The cover photo is identified in Intro, so you'll change it there.
 
 nano /\_sections/intro.md
 ```
 ---
 title: Intro
 order: 1 ## The order you'd like the section to appear on the home page
-cover-photo: /pictures/cover2.png ## Adds a background photo to this section. For most sections, leave this off.
+cover-photo: /pictures/cover2.png ## Adds a background photo to this section. For most sections, leave this off. Add it for Intro.
 cover-photo-alt: banner ## If you include a cover-photo
 icon: fa-comment
 auto-header: none ## Without this line, the title will be added automatically. If you want to hide the title (for example, to show a banner photo instead), add this line.
@@ -154,7 +144,7 @@ You can add or delete sections on the homepage by adding or deleting them in the
 
 Try opening your About.md section. You'll see all the content and can edit it however you'd like.
 
-# Changing your Gallery
+## Changing your Gallery
 ```
 nano pages/gallery.md
 ```
@@ -192,7 +182,7 @@ Couple">
 ```
 DON'T change black.jpg here. It's just a placeholder so the caption appears on a black background. But change 'alt="NAME"' to the caption you'd like to show underneath each pop-up, and change 'currentslide(#)' to match the number you put in the other two sections.
 
-# Changing your Featured Critters
+## Changing your Featured Critters
 ```
 nano _sections/featured.md
 ```
@@ -218,3 +208,46 @@ Change the image location and, if necessary, the currentSlide(#) to match the ab
 With these, it's best to replace the existing photos rather than add new ones - the thumbnails at the bottom don't play nice if you have the wrong number of photos there. I think it is changable, to an extent, but required going into the css, so I'd recommend just leaving it at 4 photos.
 
 Some notes here: url() is set to send people to the Gallery url on click right now; you can change this in assets/js/slideshow.js. Also, right now, it's set on a timer to cycle through photos every 10 seconds or so. You can change this time or get rid of it completely, in the same js file. It works well, but the only weirdness is, if you manually choose a different slide right before the timer is set to change, the timer will go off and change the picture away from the one you just chose. I'm sure there's a way to reset the timer to 0 on every click, but I don't know how to do it yet. If you choose a long enough timer (maybe 25,000 milliseconds), it'll probably happen rarely enough that it won't matter.
+
+# More Complex Changes
+
+### Templates
+You shouldn't need to change any of the template folders, but here's an overview just in case you'd like to experiment:
+* /\_includes contains snippets of code that are reused on multiple pages. So, for example, I wrote \_includes/custom_social.html to add in an Etsy icon. Another page, \_includes/footer.html, includes a footer on every page. You get the idea.
+* /\_layouts has the base formatting for each of the various page types. Here's where you can call your /\_includes files. Every new page you make use one of these files as its beginning default.
+* /\_posts is where you would store posts if you wanted to write a blog.
+* /\_sass contains css code.
+* /\_sections contains the main sections you see on the front page (Intro, Featured, About, Connect).
+* /assets contains extra js, css, fonts, and some default images. So, for example, the javascript and css controlling the slideshows are located in /assets/js/modal.js and slidegallery.js, and /assets/css/modal.css and slidegallery.css
+* /pages contains all the other pages on the website, right now Gallery, Credits, and Index (which is a blank container to hold the front page). You can have these extra pages appear in the sidebar (like Gallery) or not (like Credits).
+* /pictures is where I store all the pictures
+* Most of the other files are administrative, but \_config.yml contains some global variables: You could change the website's title, subtitle, social urls, avatar, etc.
+
+# Saving Your Changes
+After you've double-checked that everything's working in your local copy, use these commands to upload them to the repository on Github.
+
+WARNING! This will upload all the changes you've saved, so make sure you haven't done anything you don't want to make permanent.
+
+Your changes won't be uploaded until you run the commands.
+
+First time only:
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+To upload your changes
+```
+git add .
+git commit -m "Some comment to say what you've changed"
+git push https://github.com/ejalpr/melscritters master
+```
+
+If you'd like me to make changes in the future
+
+# Further Reading
+If you want to know more about the inner workings of the website:
+
+Github Pages: https://help.github.com/articles/what-is-github-pages/
+Jekyll: https://jekyllrb.com/docs/home/
+The Prologue theme which I forked, which has more information about how to customize your website: https://github.com/chrisbobbe/jekyll-theme-prologue
