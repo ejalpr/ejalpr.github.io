@@ -177,7 +177,7 @@ nano pages/gallery.md
 
 A few lines down, you'll see a bunch of divs. To add new photos or to change existing photos, you'll need to change 3 places. Mostly, it's just copying and pasting - just keep the formatting matching the existing formatting and make sure you're working inside the right divs.
 
-1. Inside \<!-- INITIAL IMAGES -->
+\1. Inside \<!-- INITIAL IMAGES -->
 
 ```
 <img src="/pictures/rat_couple.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow">
@@ -187,7 +187,7 @@ Change 'rat_couple.jpg' to the name of the picture you uploaded. Change 'current
 
 You'll notice that inside \<div class="row"> there are four separate \<div class="column c1/2/3/4">. Adding the new entry within one of these columns will place it in that column of photos on the page - four columns, assuming your browser window is big enough. Shrinking the window or going to mobile will automatically reshuffle it into two columns, then into 1 column.
 
-2. Inside \<!-- POPUP IMAGES -->
+\2. Inside \<!-- POPUP IMAGES -->
 
 ```
 <div class="mySlides">
@@ -202,7 +202,7 @@ Note, these placements will determine what order pictures appear in the slidesho
 
 In theory, you could use a low-res copy in section 1 and a high-res copy in section 2, but I just used the same file for each picture. Assuming it's big enough, it'll appear in good quality on both.
 
-3. Picture Caption: Inside \<!-- CAPTIONS -->
+\3. Picture Caption: Inside \<!-- CAPTIONS -->
 
 ```
     <div class="column">
@@ -221,7 +221,7 @@ nano _sections/featured.md
 
 You'll want to change this in two places.
 
-1. Under \<!-- MAIN PHOTO -->
+\1. Under \<!-- MAIN PHOTO -->
 
 ```
   <div class="mySlides fade">
@@ -232,7 +232,7 @@ You'll want to change this in two places.
 
 Change the image location, like before.
 
-2. Under \<!-- THUMBNAIL -->
+\2. Under \<!-- THUMBNAIL -->
 
 ```
     <div class="columnsg">
