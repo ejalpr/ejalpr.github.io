@@ -55,7 +55,8 @@ bundle exec jekyll serve
 
 And navigate to http://localhost:4000/ in your web browser. Voila! Hit ctrl-c when you're ready to shut the server down.
 
-This copy of the website is entirely local to your computer. You can test out any changes you want. If you mess things up beyond repair, just nuke the folder and restart from scratch. You won't need to rerun "bundle install".
+### Starting from scratch
+This copy of the website is entirely local to your computer. You can test out any changes you want. If you make a mistake and can't figure out how to fix it, just nuke the folder and restart from scratch. You won't need to rerun "bundle install", and none of your changes will be saved to Github.
 ```
 rm -r ~/git/melscritters
 cd ~/git
@@ -249,5 +250,7 @@ If you'd like me to make changes in the future
 If you want to know more about the inner workings of the website:
 
 Github Pages: https://help.github.com/articles/what-is-github-pages/
+
 Jekyll: https://jekyllrb.com/docs/home/
+
 The Prologue theme which I forked, which has more information about how to customize your website: https://github.com/chrisbobbe/jekyll-theme-prologue
