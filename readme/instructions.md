@@ -74,7 +74,7 @@ cd melscritters
 bundle exec jekyll serve
 ```
 
-And re-navigate to localhost:4000.
+And re-navigate to <http://localhost:4000>.
 
 # Editing the website: Basics
 Keep "bundle exec jekyll serve" running in a terminal window in the background. Open up a new window.
