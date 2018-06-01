@@ -135,3 +135,18 @@ ctrl-x and save. Go to localhost:4000/example to see your new page.
 
 ### Changing the Home Page
 Each section on the homepage is a separate file in \/sections.
+
+nano /\_sections/intro.md
+```
+---
+title: Intro
+order: 1 ## The order you'd like the section to appear on the home page
+cover-photo: /pictures/cover2.png ## Adds a background photo to this section. For most sections, leave this off.
+cover-photo-alt: banner ## If you include a cover-photo
+icon: fa-comment
+auto-header: none ## Without this line, the title will be added automatically. If you want to hide the title (for example, to show a banner photo instead), add this line.
+---
+Content content content
+
+In intro.md and intro2.md, the <style> and <div> are what put those buttons there and show/hide them depending on the screen size. If you want to change where the buttons go, you'll find the <button> </button> tags at the bottom.
+```
