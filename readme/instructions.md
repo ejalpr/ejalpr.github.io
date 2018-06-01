@@ -282,7 +282,17 @@ git commit -m "Some comment to say what you've changed"
 git push https://github.com/ejalpr/melscritters master
 ```
 
-If you'd like me to make changes in the future
+If you'd like me to make changes in the future, we should coordinate to make sure we're not making changes at the same time. There are tools to avoid conflicts, but I've never needed to use them before.
+
+After I push my changes, I usually nuke the /melscritters folder on my computer and re-clone it next time. It's not necessary, but I prefer to start from scratch each time. The website is small enough that it doesn't take long
+
+If you change things on the website and want to merge those changes into your local copy, I think the command is:
+
+```
+git pull
+```
+
+But I've never tried it before. I think it's better just to make changes on one medium at a time.
 
 # Further Reading
 If you want to know more about the inner workings of the website:
