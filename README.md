@@ -5,19 +5,19 @@ After you install it, launch Ubuntu from your start menu
 
 ### Install Dependencies (see https://jekyllrb.com/docs/installation/ for details or troubleshooting)
 ## Run these in the WSL Ubuntu terminal window
-'''
+```
 sudo apt-get install ruby ruby-dev build-essential
-'''
+```
 
 (Don't use sudo for these:)
 
-'''
+```
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME=$HOME/gems' >> ~/.bashrc
 echo 'export PATH=$HOME/gems/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 gem install jekyll bundler
-'''
+```
 
 ### Setup git
 # git should be preinstalled on WSL, but "sudo apt-get install git" if you need to
