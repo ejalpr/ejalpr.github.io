@@ -10,13 +10,16 @@ Run these in the WSL Ubuntu terminal window
 sudo apt-get install ruby ruby-dev build-essential libgmp-dev patch zlib1g-dev liblzma-dev
 ```
 
-(Don't use sudo for these:)
+(Don't use sudo for these. Allows you to run ruby gems without elevated privileges)
 
 ```
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME=$HOME/gems' >> ~/.bashrc
 echo 'export PATH=$HOME/gems/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
+```
+Install Jekyll (the platform that the website runs on):
+```
 gem install jekyll bundler
 ```
 
