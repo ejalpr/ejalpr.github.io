@@ -1,9 +1,10 @@
-# Install Windows Subsystem for Linux (WSL)
+# Instructions
+## Install Windows Subsystem for Linux (WSL)
 Instructions: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 You can choose any distro, but I'm assuming Ubuntu for these instructions
 After you install it, launch Ubuntu from your start menu
 
-# Install Dependencies (see https://jekyllrb.com/docs/installation/ for details or troubleshooting)
+## Install Dependencies (see https://jekyllrb.com/docs/installation/ for details or troubleshooting)
 ### Run these in the WSL Ubuntu terminal window
 ```
 sudo apt-get install ruby ruby-dev build-essential
