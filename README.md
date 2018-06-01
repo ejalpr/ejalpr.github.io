@@ -148,7 +148,7 @@ auto-header: none ## Without this line, the title will be added automatically. I
 ---
 Content content content
 ```
-In intro.md and intro2.md, the <style> and <div> are what put those buttons there and show/hide them depending on the screen size. If you want to change where the buttons go, you'll find the <button> </button> tags at the bottom.
+In intro.md and intro2.md, the \<style> and \<div> are what put those buttons there and show/hide them depending on the screen size. If you want to change where the buttons go, you'll find the \<button> \</button> tags at the bottom.
 
 You can add or delete sections on the homepage by adding or deleting them in the /\_sections/ folder.
 
@@ -177,7 +177,7 @@ You'll notice that inside \<div class="row"> there are four separate \<div class
   <img src="/pictures/bunny_jackalope.jpg" style="width:100%">
 </div>
 ```
-Change "# / 9" to match the number in part 1. This is the number that appears in the upper left-hand corner of the picture that pops-up when you click. Change the <img src> to your picture location. Make sure each entry is in its own separate \<div class="mySlides"> entry.
+Change "# / 9" to match the number in part 1. This is the number that appears in the upper left-hand corner of the picture that pops-up when you click. Change the \<img src> to your picture location. Make sure each entry is in its own separate \<div class="mySlides"> entry.
 
 Note, these placements will determine what order pictures appear in the slideshow, which can be different from the orders pictures appear in the 4 columns. All you have to do is make sure the number for each picture matches.
 
@@ -191,3 +191,30 @@ Couple">
     </div>
 ```
 DON'T change black.jpg here. It's just a placeholder so the caption appears on a black background. But change 'alt="NAME"' to the caption you'd like to show underneath each pop-up, and change 'currentslide(#)' to match the number you put in the other two sections.
+
+# Changing your Featured Critters
+```
+nano _sections/featured.md
+```
+You'll want to change this in two places.
+
+1. Under /<!-- MAIN PHOTO -->
+```
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+      <img src="/pictures/octopus_classof2018.jpg" style="width:100%" onclick="url()">
+  </div>
+```
+Change the image location, like before.
+
+2. Under /<!-- THUMBNAIL -->
+```
+    <div class="columnsg">
+      <img class="demo cursor" src="/pictures/octopus_classof2018.jpg" style="width:100%" onclick="currentSlide(1)" $
+    </div>
+```
+Change the image location and, if necessary, the currentSlide(#) to match the above.
+
+With these, it's best to replace the existing photos rather than add new ones - the thumbnails at the bottom don't play nice if you have the wrong number of photos there. I think it is changable, to an extent, but required going into the css, so I'd recommend just leaving it at 4 photos.
+
+Some notes here: url() is set to send people to the Gallery url on click right now; you can change this in assets/js/slideshow.js. Also, right now, it's set on a timer to cycle through photos every 10 seconds or so. You can change this time or get rid of it completely, in the same js file. It works well, but the only weirdness is, if you manually choose a different slide right before the timer is set to change, the timer will go off and change the picture away from the one you just chose. I'm sure there's a way to reset the timer to 0 on every click, but I don't know how to do it yet. If you choose a long enough timer (maybe 25,000 milliseconds), it'll probably happen rarely enough that it won't matter.
