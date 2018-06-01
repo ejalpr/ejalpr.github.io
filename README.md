@@ -198,7 +198,7 @@ nano _sections/featured.md
 ```
 You'll want to change this in two places.
 
-1. Under /<!-- MAIN PHOTO -->
+1. Under \<!-- MAIN PHOTO -->
 ```
   <div class="mySlides fade">
     <div class="numbertext">1 / 4</div>
@@ -207,13 +207,13 @@ You'll want to change this in two places.
 ```
 Change the image location, like before.
 
-2. Under /<!-- THUMBNAIL -->
+2. Under \<!-- THUMBNAIL -->
 ```
     <div class="columnsg">
-      <img class="demo cursor" src="/pictures/octopus_classof2018.jpg" style="width:100%" onclick="currentSlide(1)" $
+      <img class="demo cursor" src="/pictures/octopus_classof2018.jpg" style="width:100%" onclick="currentSlide(1)" alt="Octopus staring into the distance">
     </div>
 ```
-Change the image location and, if necessary, the currentSlide(#) to match the above.
+Change the image location and, if necessary, the currentSlide(#) to match the above. Also change the alt-text for the caption.
 
 With these, it's best to replace the existing photos rather than add new ones - the thumbnails at the bottom don't play nice if you have the wrong number of photos there. I think it is changable, to an extent, but required going into the css, so I'd recommend just leaving it at 4 photos.
 
