@@ -158,9 +158,36 @@ Try opening your About.md section. You'll see all the content and can edit it ho
 ```
 nano pages/gallery.md
 ```
-A few lines down, in \<div class="row">, you'll see a bunch of divs. To add or change these pictures, you'll want to edit the lines that say:
-  
+A few lines down, you'll see a bunch of divs. To add new photos or to change existing photos, you'll need to change 3 places. Mostly, it's just copying and pasting - just keep the formatting matching the existing formatting and make sure you're working inside the right divs.
+
+1. Inside <!-- INITIAL IMAGES -->
+
 ```
 <img src="/pictures/rat_couple.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow">
 ```
-  
+Change 'rat_couple.jpg' to the name of the picture you uploaded. Change 'currentSlide(#)' to the matching number (see below). Make sure you're not repeating any numbers!
+
+You'll notice that inside \<div class="row"> there are four separate \<div class="column c1/2/3/4">. Adding the new entry within one of these columns will place it in that column of photos on the page - four columns, assuming your browser window is big enough. Shrinking the window or going to mobile will automatically reshuffle it into two columns, then into 1 column.
+
+2. Inside <!-- POPUP IMAGES -->
+
+```
+<div class="mySlides">
+  <div class="numbertext">2 / 9</div>
+  <img src="/pictures/bunny_jackalope.jpg" style="width:100%">
+</div>
+```
+Change "# / 9" to match the number in part 1. This is the number that appears in the upper left-hand corner of the picture that pops-up when you click. Change the <img src> to your picture location. Make sure each entry is in its own separate \<div class="mySlides"> entry.
+
+Note, these placements will determine what order pictures appear in the slideshow, which can be different from the orders pictures appear in the 4 columns. All you have to do is make sure the number for each picture matches.
+
+In theory, you could use a low-res copy in section 1 and a high-res copy in section 2, but I just used the same file for each picture. Assuming it's big enough, it'll appear in good quality on both.
+
+3. Picture Caption: Inside <!-- CAPTIONS -->
+```
+    <div class="column">
+      <img class="demo" src="/pictures/black.jpg" style="width:0%" onclick="currentSlide(9)" alt="Rat 
+Couple">
+    </div>
+```
+DON'T change black.jpg here. It's just a placeholder so the caption appears on a black background. But change 'alt="NAME"' to the caption you'd like to show underneath each pop-up, and change 'currentslide(#)' to match the number you put in the other two sections.
