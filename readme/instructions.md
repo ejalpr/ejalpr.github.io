@@ -3,7 +3,7 @@ title: Instructions
 ---
 # Setup
 ## Install Windows Subsystem for Linux (WSL)
-* Instructions: (https://docs.microsoft.com/en-us/windows/wsl/install-win10). Essentially, activate it in Optional Features, then install a distro from the Windows Store.
+* Instructions: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>. Essentially, activate it in Optional Features, then install a distro from the Windows Store.
 * You can choose any distro, but I'm assuming Ubuntu 18.04 for these instructions (https://www.microsoft.com/en-us/p/ubuntu-1804/9n9tngvndl3q).
 * After you install it, launch Ubuntu from your start menu.
 * From here on, run everything in the Ubuntu terminal window.
