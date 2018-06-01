@@ -94,21 +94,44 @@ You shouldn't need to change any of the template folders, but here's an overview
 * Most of the other files are administrative, but \_config.yml contains some global variables: You could change the website's title, subtitle, social urls, avatar, etc.
 
 ### Adding or editing pages (like Gallery)
-Example: Gallery
+Example: Credits
 ```
-nano /pages/gallery.md
+nano /pages/credits.md
 ```
 Every file starts with front matter to change basic variables. Some of these are mandatory, others are optional
 ```
 ---
-layout: page ## uses this template from /\_layouts
+layout: page ## uses this template from /\_layouts. Usually, you'll want to use 'page'.
 title: Gallery ##self-explanatory. *MANDATORY
 order: 2 ## If this page appears on the sidebar, what order do you want it in?
 permalink: /credits ## will place the page at melscritters.com/credits *MANDATORY
-hide: true ## "true" if you want to hide the page from the sidebar. Don't type this line if you want it to appear.
+hide: true ## "true" if you want to hide the page from the sidebar. Don't type this line if you would like it to appear.
 cover-photo: /pictures/banner.jpg ## uses the listed picture as a cover photo. I actually don't think this does anything outside the main page but I was too lazy to delete it.
 cover-photo-alt: ## Description of cover-photo, if you choose to include it.
-icon: fa-image ## Uses this icon in the sidebar. Go to "https://fontawesome.com/icons?d=gallery&q=image&m=free" for a collection of icons you can choose from. Not all of them work, but most of them do. When you choose one, identify it as fa-[icon-name].
+icon: fa-image ## Uses this icon in the sidebar. Go to "https://fontawesome.com/icons?d=gallery&q=image&m=free" for a collection of icons you can choose from. Not all of them work, but most of the simple ones do. When you choose one, identify it as fa-[icon-name].
 ---
+
+Below the dashes goes your content. You can type in Markdown for simple formatting, images, etc (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), or add in html, css, and javascript (see /pages/gallery.md as an example).
 ```
 ctrl-x to exit nano, it'll ask you at the bottom if you want to save. n/y, then enter.
+
+Try to add a new page:
+```
+nano pages/new.md
+```
+And add:
+```
+---
+layout: page
+title: New Page
+order: 3
+permalink: /example
+icon: fa-android
+---
+This is a new page.
+
+```
+ctrl-x and save. Go to localhost:4000/example to see your new page.
+
+### Changing the Home Page
+Each section on the homepage is a separate file in \/sections.
