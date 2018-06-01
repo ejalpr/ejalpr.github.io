@@ -193,6 +193,7 @@ nano _sections/featured.md
 You'll want to change this in two places.
 
 1. Under \<!-- MAIN PHOTO -->
+
 ```
   <div class="mySlides fade">
     <div class="numbertext">1 / 4</div>
